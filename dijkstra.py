@@ -1,9 +1,14 @@
 matriz_adjacencia = [
-    [0, 4, 1, float('inf'), float('inf')],
-    [4, 0, 2, 1, float('inf')],
-    [1, 2, 0, 5, float('inf')],
-    [float('inf'), 1, 5, 0, 3],
-    [float('inf'), float('inf'), float('inf'), 3, 0]
+    [0, 9, 6, 7, float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf')],
+    [9, 0, float('inf'), float('inf'), 3, 5, float('inf'), float('inf'), float('inf'), float('inf')],
+    [6, float('inf'), 0, float('inf'), float('inf'), float('inf'), 3, float('inf'), float('inf'), float('inf')],
+    [7, float('inf'), float('inf'), 0, 2, 4, 6, float('inf'), float('inf'), float('inf')],
+    [float('inf'), 3, float('inf'), 2, 0, float('inf'), float('inf'), 5, 3, float('inf')],
+    [float('inf'), 5, float('inf'), 4, float('inf'), 0, float('inf'), 7, float('inf'), float('inf')],
+    [float('inf'), float('inf'), 3, 6, float('inf'), float('inf'), 0, 8, 7, float('inf')],
+    [float('inf'), float('inf'), float('inf'), float('inf'), 5, 7, 8, 0, float('inf'), 4],
+    [float('inf'), float('inf'), float('inf'), float('inf'), 3, float('inf'), 7, float('inf'), 0, 9],
+    [float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), 4, 9, 0]
 ]
 
 visitados = []
@@ -57,7 +62,7 @@ def refazer_caminho(vertice_destino):
 inicializa_tabela(matriz_adjacencia)
 
 vertice_origem = 0
-vertice_destino = 4
+vertice_destino = 9
 
 dijkstra()
 caminho = refazer_caminho(vertice_destino)
